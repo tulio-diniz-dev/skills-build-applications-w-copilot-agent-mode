@@ -26,9 +26,9 @@ router.register(r'workouts', WorkoutViewSet)
 router.register(r'leaderboard', LeaderboardViewSet)
 
 urlpatterns = [
-    path('', api_root, name='api_root'),
-    path('api/', include(router.urls)),
-    path('admin/', admin.site.urls),
+     path('admin/', admin.site.urls),
+     # Os endpoints da API REST seguem o padrão /api/[component]/
+     path('api/', include(router.urls)),
 ]
 """octofit_tracker URL Configuration
 
